@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Space Impostor's</title>
+    <link rel="stylesheet" href= "estilos.css">    
+</head>
+<style>
+  body { 
+    background-color:rgb(27, 41, 66);
+    width: auto;
+    height: auto;
+    
+  }
+  button {
+    background-color: rgb(18, 5, 66);
+    font-size: 3em;
+    font-style: italic;
+    color:rgb(9, 211, 93);
+    left: 5px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    cursor: grab;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    animation: animacion 2s ease-in-out 0s infinite normal none;
+  }
+  @keyframes animacion {
+    5% {
+      background: blueviolet;
+      color:rgb(36, 25, 180);
+      opacity: 0.8;
+    }
+    20% {
+      background:#ff000d;
+      color:rgb(24, 224, 224);
+      opacity: 0.7;
+    }
+    65% {
+      background:#cfe416;
+      color:rgb(24, 224, 57);
+      opacity: 0.7;
+    }
+    100% {
+      background:rgb(69, 94, 94);
+      color:#a70a1f;
+      opacity: 0.6;
+    }
+  }
+  #resultado{
+    color:#ff000d;
+    font-size: 5em;
+    align-content: space-between;
+  }
+  #enemigosVencidos{
+    color:#ff000d;
+    font-size: 2.3em;
+    font-weight: 700;
+  }
+  #score{
+    color:#ff000d;
+    font-size: 2.3em;
+    font-weight: 700;
+  }
+  #impacto{
+    color:#ff000d;
+    font-size: 4em;
+    font-weight: 900;
+    top: 400px;
+    left:400px;
+  }
+  
+</style>
+
+<body>
+  <button id="reset" type="submit" onclick="reset()" style="border: #ff000d solid 10px;background-color: #cfe416;width: 60px;height: 60px;top:400px;position: absolute;"></button>
+
+  <div id = "gameFrame">
+    <button id="start" type="submit" onclick ="NewGame()"><h2>**Impostores del espacio**</h2>
+      <h4>Start</h4>
+    </button>
+    <div id ="healthBar"></div>
+    <div id ="score"></div>
+    <div id="resultado"></div>
+    <div id="enemigosVencidos"></div>
+    <div id="impacto"></div>
+    
+    <div id ="plataforma1">
+      <div class ="enemy " id="enemy1" onclick= "isShoot(this)"></div>
+      <div class = "enemy " id="enemy2" onclick = "isShoot(this)"></div>
+      <div class ="enemy " id="enemy3" onclick= "isShoot(this)"></div>
+      <div class = "enemy " id="enemy4" onclick = "isShoot(this)"></div>
+      <div class ="enemy " id="enemy5" onclick= "isShoot(this)"></div>
+      <div class = "enemy " id="enemy6" onclick = "isShoot(this)"></div>
+  
+    </div>
+    <div id ="plataforma2">
+      <div class ="enemy " id="enemy7" onclick= "isShoot(this)"></div>
+      <div class = "enemy " id="enemy8" onclick = "isShoot(this)"></div>
+      <div class ="enemy " id="enemy9" onclick= "isShoot(this)"></div>
+      <div class = "enemy " id="enemy10" onclick = "isShoot(this)"></div>
+      <div class ="enemy " id="enemy11" onclick= "isShoot(this)"></div>
+      <div class = "enemy " id="enemy12" onclick = "isShoot(this)"></div>
+      <div class ="enemy" id="enemy13" onclick="isShoot(this)"></div>
+  
+    </div>
+    
+  <script src="config.js"></script>
+  
+</body>
+</html>
