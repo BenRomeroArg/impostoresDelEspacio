@@ -1,8 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+body{
+  
+  display: flex;
+  flex-direction: column;
+  background-color: #5f555a;
+  font-family: monospace;   
+}
 #gameFrame {
+    display:flex;
     background-color:  black;
     height: 600px;
     width: 800px;
-    margin-left: 18%;
+    margin-left: 5%;
     position: relative;  
     overflow: hidden;
     background-color: grey;
@@ -10,32 +23,56 @@
     border-radius: 10px;
     box-shadow:  0 2em 2em rgba(75, 118, 236, 0.5);
 }
-@media (max-width: 420px) {
+@media (max-width: 362px) {
   #gameFrame{
     top: 10px;
-    width: 395px;
+    min-width: 300px;
     margin-left: 0px;
-    padding:0%;
     position: absolute;
-    height: 700px;
+    min-height: 700px;
   }
   #start{
     transform: scale(0.9);
     font-size: 40px;
   }
   #reset{ 
-    top: 720px; 
+    top: 720px;
+    transform: scale(0.9);
+    position: sticky; 
   }
   #plataforma1{
-    transform:scale(0.6);
+    transform:scale(0.9);
   }
   #plataforma2{
-    transform:scale(0.6);
+    transform:scale(0.9);
+  }
+}
+
+@media (max-width: 509px) {
+  #gameFrame{
+    top: 2px;
+    width: 330px;
+    margin-left: 0px;
+    position: absolute;
+    height: 290px;
+  }
+  #start{
+    transform: scale(0.9);
+    font-size: 30px;
+  }
+  #reset{ 
+    top: 291px; 
+  }
+  #plataforma1{
+    transform:scale(0.2);
+  }
+  #plataforma2{
+    transform:scale(0.2);
   }
 }
 
 #healthBar {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     height: 39px;

@@ -15,6 +15,8 @@ function isShoot(enemy) {
     resultadofinal = totalScore * plus;
     score.innerHTML=  `Score: ${resultadofinal}`;
     score.innerHTML;
+    totalEnemyVencido.innerHTML=  `Dead: ${totalScore}`;
+    totalEnemyVencido.innerHTML;
     
     
     if(!livingEnemies().length){  
@@ -76,7 +78,7 @@ function resultFinal(){
         result.innerHTML="Y O U W I N";
         result.innerHTML;
        
-        return  alert("Vencimos a los invasores, tu recompenza es: $ " + (resultadofinal + totalScore + Extrapuntos));    
+        return  alert("Vencimos a los invasores, tu recompenza es: $1000000 " );    
     }
     if(livingEnemies().length) {
         result.innerHTML="Game Over";
