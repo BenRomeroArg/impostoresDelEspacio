@@ -13,6 +13,7 @@ body{
 #gameFrame {
     display:flex;
     background-color:  black;
+    border:#0c0d0e solid 1.5px;
     height: 600px;
     width: 600px;
     margin-left: 1%;
@@ -26,17 +27,17 @@ body{
 @media (max-width: 570px) {
   #gameFrame{
     top: 1px;
-    width: 358px;
+    width: 370px;
     margin-left: 0px;
     position: absolute;
-    min-height: 550px;
+    min-height: 650px;
   }
   #start{
     transform: scale(0.9);
     font-size: 30px;
   }
   #reset{ 
-   margin-top: 1px;
+    margin-top: 50px;
     transform: scale(0.9);
     position: sticky; 
   }
@@ -47,8 +48,6 @@ body{
     transform:scale(0.9);
   }
 }
-
-
 
 #healthBar {
     position: absolute;
@@ -88,25 +87,29 @@ body{
   position: absolute;
   padding: 5px;
   background: linear-gradient(#034d19, rgb(214, 10, 10));
-  bottom: -85px;
-  transition: all 1.2s;
+  bottom: -115px;
+  transition: all 1.5s;
   border-top-right-radius: 39%;
   border-top-left-radius: 50%;
   border-style: solid 5px; 
   border-color: black;
   box-shadow:  0 1.5em 1em 1em #4c5d6480;
+  
 }
 
 #enemy1 { 
   left: 42px;
   background-color: crimson;
   border-radius: 100%;
+  transform:scale(1.5);
+
 
 }
 #enemy2 { 
   left: 50px;
   background-color: rgb(137, 185, 23);
   border-radius: 100%;
+  transform: scale(1.5);
 }
 #enemy3 { 
   left: 50px;
@@ -128,11 +131,13 @@ body{
   left: 50px;
   background-color: rgb(137, 185, 23);
   border-radius: 100%;
+  transform:scale(1.6);
 }
 #enemy16 { 
   left: 50px;
   background-color: rgb(60, 220, 20);
   border-radius: 100%;
+  transform: scale(1.7)
 }
 #enemy17 { 
   left: 50px;
@@ -142,28 +147,51 @@ body{
 #enemy18 { 
   left: 42px;
   background-color: crimson;
-  border-radius: 100%;
+  
+  transform: scale(1.5);
 
 }
 #enemy19 { 
   left: 50px;
   background-color: rgb(137, 185, 23);
-  border-radius: 100%;
+  
+  transform: scale(1.7);
 }
 #enemy20 { 
   left: 50px;
   background-color: rgb(60, 220, 20);
   border-radius: 100%;
+  transform: scale(1.6);
 }
 #enemy21 { 
   left: 50px;
   background-color: rgb(220, 20, 203);
   border-radius: 100%;
 }
-#enemy5 { left: 40px;}
-#enemy6 { left: 67px;}
-#enemy7 { left: 52px;}
-#enemy8 { left: 45px;}
+#enemy5 { 
+  left: 40px;
+  background-color: rgb(60, 220, 20);
+  border-radius: 100%;
+  transform: scale(1.6);
+}
+#enemy6 { 
+  left: 67px;
+  background-color: rgb(60, 220, 20);
+  border-radius: 100%;
+  transform: scale(1.6);
+}
+#enemy7 { 
+  left: 52px;
+  background-color: rgb(60, 220, 20);
+  border-radius: 100%;
+  transform: scale(1.7);
+}
+#enemy8 { 
+  left: 45px;
+  background-color: rgb(60, 220, 20);
+  border-radius: 100%;
+  transform: scale(1.6);
+}
 #enemy9 { 
   left: 35px;
   background-color: rgb(16, 195, 207);
@@ -174,9 +202,24 @@ body{
    background-color: crimson;
    border-radius: 100%;
 }
-#enemy11 { left: 50px;}
-#enemy12 { left: 50px;}
-#enemy13 { left: 32px;}
+#enemy11 { 
+  left: 50px;
+  background-color: rgb(60, 220, 20);
+  border-radius: 100%;
+  transform: scale(1.6);
+}
+#enemy12 { 
+  left: 50px;
+  background-color: rgb(60, 220, 20);
+  border-radius: 100%;
+  transform: scale(1.6);
+}
+#enemy13 { 
+  left: 32px;
+  background-color: rgb(60, 220, 20);
+  border-radius: 100%;
+  transform: scale(1.6);
+}
 
 .enemy:before {
   content: "><";
@@ -195,18 +238,19 @@ body{
 
 .enemy:after {
   content: ":";
+  font-weight: 900;
   position: absolute;
   width: 15px;
   height: 15px;
   left: 5%;
   bottom: 5px;
-  background-color: rgb(15, 158, 214);
+  background-color: rgb(16, 17, 17);
   color: #dd0505;
   text-align: center;
   border-radius: 15px;
   border-bottom: 20px solid #111;
-  border-right: 2px solid rgb(4, 18, 97);
-  transition: all .9s;
+  border-right: 2px solid rgb(81, 82, 87);
+  transition: all 1.4s;
 }
    
 .enemy.shooting {
@@ -215,19 +259,22 @@ body{
 
 .enemy.shooting:after {
   content: "*";
+  font-weight: 900;
   left: 28px;
   color: rgb(240, 6, 6);
-  font-size: 2em;
-  transform: scale(3.0) rotate3d(5, 2, 6, -15deg);
+  font-size: 2.2em;
+  transform: scale(2.5) rotate(540deg) translateY(-20px);
   box-shadow: 20px -10px 30px black;
-  transition: all 1.1s;
+  transition: all .4s;
 }
 
 .enemy.dead {
-  background: cornflowerblue;
-  transform: scale(0.3) rotate(1590deg);
+  background: rgb(94, 243, 118);
+  transform: scale(0.7) rotate(990deg);
   border-radius: 100%;
-  content: "+++";
+  content: "X X";
+  pointer-events: none;
+  cursor:default;
 }
 
 .enemy.dead:before {
@@ -240,61 +287,60 @@ body{
 }
 
 .enemy.showing {
-  bottom: 0px;
+  bottom: 10px;
 } 
 
 #plataforma1 {
   position:absolute;
   overflow:hidden;
   left: 0px;
-  top: 20px;
-  background-color: cornflowerblue;
-  padding-left: 10px;
-  padding-top: 10px;
+  top: 30px;
+  background-color: rgb(68, 92, 138);
+  padding-left: 5px;
+  padding-top: 20px;
   padding-right: 10px;
-  border:#0c0d0e double dotted 18px;
-  width: 180px;
+  border: black solid 8px;
+  width: 190px;
   height: 127px;
   border-radius: 95%;
-  box-shadow:  rgba(96, 49, 224, 0.3) inset 18px 5px 5px;
-  animation: animacion2 16s ease-in-out 0s infinite normal none;
+  box-shadow:  rgba(96, 49, 224, 0.5) inset 18px 5px 5px;
+  animation: animacion2 25s ease-in-out 0s infinite normal none;
   transition: 2s;
 }
 @keyframes animacion2 {
   5% {
    
-   transform: translateX(200px) translateY(30px) scale(0.5) rotate(1960deg) ;
+   transform: translateX(200px) translateY(380px) rotate(1960deg) ;
   }
   28% {
-    transform: translateX(200px) traslateY(250px) scale(1);
+    transform: translateX(20px) translateY(390px) scale(1);
   }
   45%{
     transform: rotate(1980deg);
     
   }   
   67% {
-    transform:translateX(50px) translateY(40px);
+    transform:translateX(70px) translateY(40px);
   }
-  70%{
-    transform:scale(0.6);
-  }
+ 
   80% {
-    transform: translateX(250px) translateY(390px) rotate(1980deg);
+    transform: translateX(0px) translateY(390px) rotate(1980deg);
   }
   95%{
-    transform: translateX(40px)
+    transform: translateX(200px);
   }
   
 } 
   
 #plataforma2 {
   position: absolute;
+  padding-top:10px;
   left: 0px;
   overflow: hidden;
   top: 10px;
-  width: 150px;
+  width: 190px;
   height: 127px;
-  border: #0c0d0e double dotted 38px;
+  border: black solid 8px;
   border-radius: 95%;
   background-color: cornflowerblue;
   box-shadow: rgba(43, 2, 156, 0.3) inset 18px 5px 5px;
@@ -303,22 +349,22 @@ body{
 }
 @keyframes animacion4 {
   5% {
-   transform: translateX(250px) translateY(348px);
+   transform: translateX(200px) translateY(388px);
   }
   
   25% {
-    transform: translateX(10px) translateY(28px) rotate(980deg);
+    transform: translateX(70px) translateY(388px) rotate(980deg);
   } 
   
   48% {
-    transform: translateX(20px) translateY(350px) rotate(1960deg);  
+    transform: translateX(200px) translateY(50px) rotate(1960deg);  
   }
   
   70% {
-    transform: translateX(280px) translateY(350px) rotate(1920deg);
+    transform: translateX(20px) translateY(380px) rotate(1920deg);
   }
   90% {
-    transform: translateX(50px) translateY(50px) rotate(1920deg);
+    transform: translateX(200px) translateY(50px) rotate(1920deg);
   }
 }
 

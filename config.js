@@ -11,14 +11,13 @@ var extrapoint = 127;
 function isShoot(enemy) {
     
     enemy.classList.add("dead");
-    totalScore++;
+    totalScore+=1;
     resultadofinal = totalScore * plus;
     score.innerHTML=  `Score: ${resultadofinal}`;
     score.innerHTML;
     totalEnemyVencido.innerHTML=  `Dead: ${totalScore}`;
-    totalEnemyVencido.innerHTML;
-    
-    
+    totalEnemyVencido.innerHTML; 
+
     if(!livingEnemies().length){  
        resultFinal();
     }   
@@ -31,7 +30,7 @@ function enemyAttacksMe(enemy) {
     }, 3500);
     setTimeout( () => {
      enemy.classList.remove("showing");
-    }, 3200);
+    }, 3100);
 }
 function enemyShootsMe(enemy) {
     
@@ -56,7 +55,7 @@ function randomEnemyAttacks() {
     randomEnemyNo = Math.floor(randomEnemyNo);
     var enemy = livingEnemies() [randomEnemyNo];
 
-    var randomDelay = Math.random() * 3600 + 1300;
+    var randomDelay = Math.random() * 3700 + 1500;
 
     setTimeout( () => {
         enemyAttacksMe(enemy);
@@ -75,7 +74,7 @@ function updateHealthPoints (points) {
 }
 function resultFinal(){
     if(!livingEnemies().length){
-        result.innerHTML="Y O U W I N";
+        result.innerHTML="YOU WIN";
         result.innerHTML;
        
         return  alert("Vencimos a los invasores, tu recompenza es: $1000000 " );    
