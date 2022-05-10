@@ -11,12 +11,15 @@ var extrapoint = 127;
 function isShoot(enemy) {
     
     enemy.classList.add("dead");
+    if("vibrate" in window.navigator) {
+        window.navigator.vibrate(100);
+    }
     totalScore+=1;
     resultadofinal = totalScore * plus;
     score.innerHTML=  `Score: ${resultadofinal}`;
     score.innerHTML;
     totalEnemyVencido.innerHTML=  `Dead: ${totalScore}`;
-    totalEnemyVencido.innerHTML; 
+    totalEnemyVencido.innerHTML;
 
     if(!livingEnemies().length){  
        resultFinal();
@@ -39,6 +42,9 @@ function enemyShootsMe(enemy) {
         updateHealthPoints(healthPoints - 25);      
         impact.innerHTML="Danger...";
         impact.innerHTML;
+        if("vibrate" in window.navigator) {
+            window.navigator.vibrate(100);
+        }
         setTimeout( () => {
             impact.innerHTML="";
             impact.innerHTML;
