@@ -8,6 +8,7 @@ var resultadofinal;
 const totalEnemyVencido = document.querySelector('#enemigosVencidos');
 var extrapoint = 127;
 
+
 function isShoot(enemy) {
     
     enemy.classList.add("dead");
