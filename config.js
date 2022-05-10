@@ -12,7 +12,7 @@ function isShoot(enemy) {
     
     enemy.classList.add("dead");
     if("vibrate" in window.navigator) {
-        window.navigator.vibrate(100);
+        window.navigator.vibrate(200);
     }
     totalScore+=1;
     resultadofinal = totalScore * plus;
@@ -43,7 +43,7 @@ function enemyShootsMe(enemy) {
         impact.innerHTML="Danger...";
         impact.innerHTML;
         if("vibrate" in window.navigator) {
-            window.navigator.vibrate(100);
+            window.navigator.vibrate(400);
         }
         setTimeout( () => {
             impact.innerHTML="";
