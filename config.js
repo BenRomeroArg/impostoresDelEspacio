@@ -96,6 +96,8 @@ function resultFinal(){
 function NewGame() {
    randomEnemyAttacks(); 
    document.querySelector("#start").style.display = "none";
+   document.getElementById('player').play();
+
 }
 function reset(){
     

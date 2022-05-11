@@ -43,13 +43,11 @@ body{
     position: sticky; 
   }
   #music{
-    margin-top: 655px;
-    margin-left: 200px;
+    position: sticky;
+    margin-top: 70px;
+    margin-left: 150px;
   }
-  #music2{
-    margin-top: 655px;
-    margin-left:280px;
-  }
+  
   #plataforma1{
     transform:scale(0.9);
   }
@@ -61,10 +59,7 @@ body{
   margin-top: 605px;
   margin-left: 300px;
 }
-#music2{
-  margin-top: 605px;
-  margin-left:380px;
-}  
+
 #healthBar {
     position: absolute;
     top: 0;
