@@ -19,11 +19,11 @@ function isShoot(enemy) {
     resultadofinal = totalScore * plus;
     score.innerHTML=  `Score: ${resultadofinal}`;
     score.innerHTML;
-    totalEnemyVencido.innerHTML=  `Dead: ${totalScore}`;
+    totalEnemyVencido.innerHTML=  `Good: ${totalScore}`;
     totalEnemyVencido.innerHTML;
 
     if(!livingEnemies().length){  
-       resultFinal();
+       resultadoFinal();
     }   
     
 }
@@ -76,20 +76,20 @@ function updateHealthPoints (points) {
 
     healthBar.style.width = points + "%";
     if (healthPoints < 1) {
-      resultFinal();        
+      resultadoFinal();        
     }                
 }
-function resultFinal(){
+function resultadoFinal(){
     if(!livingEnemies().length){
         result.innerHTML="YOU WIN";
         result.innerHTML;
        
-        return  alert("Vencimos a los invasores, tu recompenza es: $1000000 " );    
+        return  alert("Vencimos a los impostores, tu recompenza es: x$zl 1000000 " );    
     }
     if(livingEnemies().length) {
         result.innerHTML="Game Over";
         result.innerHTML;
-        alert("Nos vencieron..Total de enemigos vencidos: " + totalScore);  
+        alert("Nos vencieron..Total de impostores: " + totalScore);  
     }
     return document.location.reload(2000);   
 }
