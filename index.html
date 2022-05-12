@@ -79,6 +79,10 @@
   #reset{
     top:602px;
   }
+  #player {
+      top:602px;
+      margin-left: 75px;
+  }
   
 </style>
 
@@ -125,9 +129,10 @@
   
     </div>
   </div>
-  <button id="reset" type="submit" onclick="reset()" style="border: #ff000d solid 10px;background-color: #cfe416;width: 60px;height: 60px;position: absolute;">R</button>
-  <audio id="player" src="music/Inception.mp3" autoplay></audio>
-    
+  
+  <button id="reset" type="submit" onclick="reset()" style="border: #ff000d solid 10px;background-color: #cfe416;width: 60px;height: 60px;">R</button>
+  <audio id="player" src="music/Inception.mp3"controls="controls" type="audio/mp3" preload="preload"></audio>
+  
   <script src="config.js"></script>
   
 </body>

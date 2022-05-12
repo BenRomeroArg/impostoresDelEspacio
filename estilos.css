@@ -25,28 +25,30 @@ body{
     border-radius: 10px;
     box-shadow:  0 2em 2em rgba(75, 118, 236, 0.5);
 }
-@media (max-width: 570px) {
+@media (max-width: 590px) {
   #gameFrame{
     top: 1px;
-    width: 370px;
+    width: 397px;
     margin-left: 0px;
     position: absolute;
     min-height: 650px;
+  }
+  #player{
+    position: sticky;
+    margin-left:75px;
+    padding-top: 20px;
+    top:610px;
+    
   }
   #start{
     transform: scale(0.9);
     font-size: 30px;
   }
-  #reset{ 
+  /*#reset{ 
     margin-top: 50px;
     transform: scale(0.9);
     position: sticky; 
-  }
-  #music{
-    position: sticky;
-    margin-top: 70px;
-    margin-left: 150px;
-  }
+  }*/
   
   #plataforma1{
     transform:scale(0.7);
@@ -55,10 +57,7 @@ body{
     transform:scale(0.7);
   }
 }
-#music{
-  margin-top: 605px;
-  margin-left: 300px;
-}
+
 
 #healthBar {
     position: absolute;
