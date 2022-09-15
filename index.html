@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deep Space Impostor's</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href= "estilos.css">    
 </head>
 <style>
@@ -88,52 +90,49 @@
 
 <body>
   
-  
-  <div id = "gameFrame">
-    <button id="start" type="submit" onclick ="NewGame()"><h2>**Impostores del espacio**</h2>
-      <h4>Start</h4>
-    </button>
-    <div id ="healthBar"></div>
-    <div id ="score"></div>
-    <div id="resultado"></div>
-    <div id="enemigosVencidos"></div>
-    <div id="impacto"></div>
+  <div class="container-md">
+    <div id = "gameFrame">
+      <button id="start" type="submit" onclick ="NewGame()"><h2>**Impostores del espacio**</h2>
+        <h4>Start</h4>
+      </button>
+      <div id ="healthBar"></div>
+      <div id ="score"></div>
+      <div id="resultado"></div>
+      <div id="enemigosVencidos"></div>
+      <div id="impacto"></div>
     
-    <div id ="plataforma1">
-      <span class ="enemy " id="enemy1" onclick= "isShoot(this)"></span>
-      <span class = "enemy " id="enemy2" onclick = "isShoot(this)"></span>
-      <span class ="enemy " id="enemy3" onclick= "isShoot(this)"></span>
-      <span class = "enemy " id="enemy4" onclick = "isShoot(this)"></span>
-      <span class ="enemy " id="enemy5" onclick= "isShoot(this)"></span>
-      <span class = "enemy " id="enemy6" onclick = "isShoot(this)"></span>
-      <span class ="enemy " id="enemy17" onclick= "isShoot(this)"></span>
-      <span class = "enemy " id="enemy18" onclick = "isShoot(this)"></span>
-      <span class ="enemy" id="enemy19" onclick="isShoot(this)"></span>
-      <div class = "enemy " id="enemy20" onclick = "isShoot(this)"></div>
-      <div class ="enemy" id="enemy21" onclick="isShoot(this)"></div>
-  
-  
+      <div id ="plataforma1">
+        <span class ="enemy " id="enemy1" onclick= "isShoot(this)"></span>
+        <span class = "enemy " id="enemy2" onclick = "isShoot(this)"></span>
+        <span class ="enemy " id="enemy3" onclick= "isShoot(this)"></span>
+        <span class = "enemy " id="enemy4" onclick = "isShoot(this)"></span>
+        <span class ="enemy " id="enemy5" onclick= "isShoot(this)"></span>
+        <span class = "enemy " id="enemy6" onclick = "isShoot(this)"></span>
+        <span class ="enemy " id="enemy17" onclick= "isShoot(this)"></span>
+        <span class = "enemy " id="enemy18" onclick = "isShoot(this)"></span>
+        <span class ="enemy" id="enemy19" onclick="isShoot(this)"></span>
+        <div class = "enemy " id="enemy20" onclick = "isShoot(this)"></div>
+        <div class ="enemy" id="enemy21" onclick="isShoot(this)"></div>
+      </div>
+      <div id ="plataforma2">
+        <div class ="enemy " id="enemy7" onclick= "isShoot(this)"></div>
+        <div class = "enemy " id="enemy8" onclick = "isShoot(this)"></div>
+        <div class ="enemy " id="enemy9" onclick= "isShoot(this)"></div>
+        <div class = "enemy " id="enemy10" onclick = "isShoot(this)"></div>
+        <div class ="enemy " id="enemy11" onclick= "isShoot(this)"></div>
+        <div class = "enemy " id="enemy12" onclick = "isShoot(this)"></div>
+        <div class ="enemy" id="enemy13" onclick="isShoot(this)"></div>
+        <div class ="enemy " id="enemy14" onclick= "isShoot(this)"></div>
+        <div class = "enemy " id="enemy15" onclick = "isShoot(this)"></div>
+        <div class ="enemy" id="enemy16" onclick="isShoot(this)"></div>
+      </div>
     </div>
-    <div id ="plataforma2">
-      <div class ="enemy " id="enemy7" onclick= "isShoot(this)"></div>
-      <div class = "enemy " id="enemy8" onclick = "isShoot(this)"></div>
-      <div class ="enemy " id="enemy9" onclick= "isShoot(this)"></div>
-      <div class = "enemy " id="enemy10" onclick = "isShoot(this)"></div>
-      <div class ="enemy " id="enemy11" onclick= "isShoot(this)"></div>
-      <div class = "enemy " id="enemy12" onclick = "isShoot(this)"></div>
-      <div class ="enemy" id="enemy13" onclick="isShoot(this)"></div>
-      <div class ="enemy " id="enemy14" onclick= "isShoot(this)"></div>
-      <div class = "enemy " id="enemy15" onclick = "isShoot(this)"></div>
-      <div class ="enemy" id="enemy16" onclick="isShoot(this)"></div>
   
-  
-    </div>
+    <button id="reset" type="submit" onclick="reset()" style="border: #ff000d solid 10px;background-color: #cfe416;width: 60px;height: 60px;">R</button>
+    <audio id="player" src="music/Inception.mp3"controls="controls" type="audio/mp3" preload="preload"></audio>
   </div>
-  
-  <button id="reset" type="submit" onclick="reset()" style="border: #ff000d solid 10px;background-color: #cfe416;width: 60px;height: 60px;">R</button>
-  <audio id="player" src="music/Inception.mp3"controls="controls" type="audio/mp3" preload="preload"></audio>
-  
   <script src="config.js"></script>
-  
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
